@@ -1,0 +1,10 @@
+<h1>ur epic code is <%= @code %></h1>
+<form phx-submit="submit">
+  <input type="text" name="code" placeholder="Code">
+  <input type="text" name="txt" placeholder="Text">
+  <button type="submit">Submit</button>
+</form>
+
+<%= for m <- @msgs do %>
+  <p><%= m %></p>
+<% end %>
