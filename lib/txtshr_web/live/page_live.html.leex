@@ -1,8 +1,9 @@
-<h1>ur epic code is <%= @code %></h1>
+<h3>Your code is</h3>
+<div class="code"><%= if @loaded do %><%= @code %><% else %>Loading<% end %></div>
 <form phx-submit="submit">
   <input type="text" name="code" placeholder="Code" autocomplete="off">
   <input type="text" name="txt" placeholder="Text" autocomplete="off">
-  <button type="submit">Submit</button>
+  <div class="wrapper"><button type="submit">Send</button></div>
 </form>
 
 <%= for m <- @msgs do %>

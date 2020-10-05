@@ -4,11 +4,11 @@ defmodule TxtshrWeb.PageLive do
   @impl true
   def mount(_params, _session, socket) do
     if connected?(socket) do
-      randstr = Txtshr.random_string(6)
+      randstr = Txtshr.random_string()
       :ets.insert(:stuff, {randstr, self()})
-      {:ok, assign(socket, msgs: [], code: randstr)}
+      {:ok, assign(socket, msgs: [], code: randstr, loaded: true)}
     else
-      {:ok, assign(socket, msgs: [], code: "")}
+      {:ok, assign(socket, msgs: [], code: "", loaded: false)}
     end
   end
 
