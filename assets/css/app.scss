@@ -112,6 +112,10 @@ h3 {
   font-family: 'Roboto Mono', monospace;
 }
 
+p {
+  font-family: 'Roboto Mono', monospace;
+}
+
 ::placeholder {
   color: #F5F5F5;
   opacity: 0.5;
@@ -132,4 +136,35 @@ form {
 .wrapper {
   text-align: center;
   width: 100%;
+}
+
+form {
+  margin-bottom: 0;
+}
+
+button {
+  margin-bottom: 1.5rem;
+}
+
+.msgbox {
+  border-radius: 3em;
+  margin-bottom: 2%;
+  background-color: #424242;
+  vertical-align: middle;
+  animation-name: appear;
+  animation-duration: 0.5s;
+
+  p {
+    padding: 2%;
+    margin-bottom: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
