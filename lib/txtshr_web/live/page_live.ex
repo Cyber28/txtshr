@@ -17,10 +17,10 @@ defmodule TxtshrWeb.PageLive do
     case :ets.lookup(:stuff, code) do
       [{_, pid}] ->
         send(pid, {:msg, txt})
-        {:noreply, put_flash(socket, :info, "sent")}
+        {:noreply, push_event(socket, "toast", %{type: "success", msg: "Sent"})}
 
       _ ->
-        {:noreply, put_flash(socket, :error, "code not found")}
+        {:noreply, push_event(socket, "toast", %{type: "error", msg: "Code not found"})}
     end
   end
 

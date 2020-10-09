@@ -8,9 +8,29 @@
     <%= live_title_tag assigns[:page_title] || "Txtshr", suffix: " · Phoenix Framework" %>
     <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
   <body>
+    <script>
+      const n = new Notyf({
+        dismissible: true,
+        position: {
+          x: 'right',
+          y: 'top'
+        }
+      })
+      const Hooks = {}
+      Hooks.Toast = {
+        mounted() {
+          console.log('mounted')
+          this.handleEvent("toast", ({type, msg}) => {
+            n[type](msg)
+          })
+        }
+      }
+    </script>
     <div class="cntr">
       <%= @inner_content %>
     </div>
