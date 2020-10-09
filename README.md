@@ -1,21 +1,7 @@
-yeah im too lazy to edit this for now but who cares
-
 # Txtshr
 
-To start your Phoenix server:
+Small website to share text and links instantly and privately. Public instance available at [txtshr.cyber28.xyz](https://txtshr.cyber28.xyz)
 
-  * Install dependencies with `mix deps.get`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+### Deploying
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Refer to [Phoenix Framework's Introduction to Deployment](https://hexdocs.pm/phoenix/deployment.html#content)
