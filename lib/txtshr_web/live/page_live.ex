@@ -30,5 +30,8 @@ defmodule TxtshrWeb.PageLive do
     {:noreply, assign(socket, msgs: [%{m: txt, u: ValidUrl.validate(txt)} | socket.assigns.msgs])}
   end
 
-  # TODO: handle disconnects
+  @impl true
+  def terminate(_reason, socket) do
+    :ets.delete(:stuff, socket.assigns.code)
+  end
 end
