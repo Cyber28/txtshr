@@ -112,7 +112,7 @@ h3 {
   font-family: 'Roboto Mono', monospace;
 }
 
-p {
+p, a {
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -154,10 +154,16 @@ button {
   animation-name: appear;
   animation-duration: 0.5s;
 
-  p {
-    padding: 2%;
+  p, a {
+    padding: 2% !important;
     margin-bottom: 0;
   }
+}
+
+a {
+  display: block;
+  text-decoration: underline;
+  color: #2196F3;
 }
 
 @keyframes appear {

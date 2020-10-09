@@ -7,8 +7,12 @@
   <div class="wrapper"><button type="submit">Send</button></div>
 </form>
 
-<%= for m <- @msgs do %>
+<%= for msg <- @msgs do %>
   <div class="msgbox">
-    <p><%= m %></p>
+    <%= if msg.u do %>
+      <a href="<%= msg.m %>"><%= msg.m %></a>
+    <% else %>
+      <p><%= msg.m %></p>
+    <% end %>
   </div>
 <% end %>
