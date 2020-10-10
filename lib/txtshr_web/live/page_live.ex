@@ -26,7 +26,6 @@ defmodule TxtshrWeb.PageLive do
 
   @impl true
   def handle_info({:msg, txt}, socket) do
-    IO.inspect(socket.assigns.msgs)
     {:noreply, assign(socket, msgs: [%{m: txt, u: ValidUrl.validate(txt)} | socket.assigns.msgs])}
   end
 
